@@ -23,7 +23,8 @@ export const getToken = functions.https.onRequest((request, response) => {
 
   // https://github.com/auth0/node-jsonwebtoken#readme
   const dataPayload = {
-    data: 'foobar'
+    sub: userId,
+    aud: 'braze'
   }
   const options = {
     expiresIn: expiresIn,
