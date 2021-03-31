@@ -7,7 +7,8 @@ const keys = require('./keys');
 
 export const getToken = functions.https.onRequest((request, response) => {
   const payload = request.body.data;
-  functions.logger.info("Payload log", { payload: payload, request: request});
+  functions.logger.info("Payload log", { payload: payload });
+  functions.logger.info("Request body", { body: request.body });
   if (payload === undefined) {
     response.send({ data: { error: "no body data" } });
     return;
