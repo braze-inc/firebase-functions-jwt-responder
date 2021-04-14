@@ -41,5 +41,6 @@ export const getToken = functions.https.onRequest((request, response) => {
   }
   functions.logger.info("Generated jwt token", genData);
 
+  response.set('Access-Control-Allow-Origin', '*');
   response.send({ data: { token: token, meta: genData } });
 });
