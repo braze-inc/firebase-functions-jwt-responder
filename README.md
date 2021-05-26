@@ -1,6 +1,14 @@
 # just-wishful-thinking
 JWT
 
+# Inputs
+
+```
+const userId = payload.user_id;
+const expiresIn = payload.expires_in || '1h';
+const algorithm = payload.algorithm || 'RS256';
+```
+
 # RSA keys
 
 ## RSA Key 1
